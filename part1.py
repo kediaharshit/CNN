@@ -82,7 +82,7 @@ def goog_forward(goog, x):
     # N x 1024
     return x
 
-PATH = "D:\\Coursework\\Sem 6\\CS6910\\Assignment 3\\"
+PATH = ""
 classes = ["030.Fish_Crow", "041.Scissor_tailed_Flycatcher", "049.Boat_tailed_Grackle", "082.Ringed_Kingfisher", 
            "103.Sayornis", "114.Black_throated_Sparrow", "168.Kentucky_Warbler"]
 
@@ -91,7 +91,7 @@ BATCH_SIZE = 10
 EPOCH = 5
 LR = 1e-3
 
-full_dataset = dataset(filename=os.path.join(PATH, "train.h5"))
+full_dataset = dataset("traindata.h5")
 train_size = int(len(full_dataset)*0.8)
 valid_size = len(full_dataset) - train_size
 train_dataset, valid_dataset = torch.utils.data.random_split(full_dataset, [train_size, valid_size])
